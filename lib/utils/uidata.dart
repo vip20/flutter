@@ -17,5 +17,5 @@ class UIData {
 
 //Route
   static const String homeRoute = "/";
-  static const String test = "/test";
+  static const String productRoute = "/product";
 }

@@ -52,11 +52,18 @@ class _HomePageState extends State<HomePage> {
                         (context, index) => Container(
                             height: _itemExtent,
                             padding: EdgeInsets.only(left: 15.0),
-                            child: Card(
-                              child: Column(
-                                children: <Widget>[
-                                  Container(child: Text(_products[index]))
-                                ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.pushNamed(
+                                    context, UIData.productRoute,
+                                    arguments: '$index');
+                              },
+                              child: Card(
+                                child: Column(
+                                  children: <Widget>[
+                                    Container(child: Text(_products[index]))
+                                  ],
+                                ),
                               ),
                             )),
                         childCount: _products.length))
